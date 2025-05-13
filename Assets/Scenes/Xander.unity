@@ -131,10 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    - target: {fileID: 3186111432686968431, guid: 23d02b5e0b7be454f990da9450edb30c, type: 3}
-      propertyPath: videoClip
-      value: 
-      objectReference: {fileID: 32900000, guid: 092cc9af1d547fd4e89d9bda329a35f0, type: 3}
     - target: {fileID: 6971766360069003100, guid: 23d02b5e0b7be454f990da9450edb30c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -174,10 +170,6 @@ PrefabInstance:
     - target: {fileID: 6971766360069003100, guid: 23d02b5e0b7be454f990da9450edb30c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265011494598214404, guid: 23d02b5e0b7be454f990da9450edb30c, type: 3}
-      propertyPath: m_VideoClip
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
