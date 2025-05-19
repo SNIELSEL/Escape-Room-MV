@@ -3,7 +3,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(PinBoardManager))]
+[CustomEditor(typeof(SocketStatus))]
 public class PinBoardManagerEditor : Editor
 {
     SerializedProperty socketsProp;
@@ -17,17 +17,16 @@ public class PinBoardManagerEditor : Editor
     {
         serializedObject.Update();
 
-        // Header
+        int OccupiedTotal = socketsProp.GetArrayElementAtIndex(0).FindPropertyRelative("OccupiedSockets").intValue;
+        int CorrectTotal = socketsProp.GetArrayElementAtIndex(0).FindPropertyRelative("CorrectSockets").intValue;
         EditorGUILayout.BeginHorizontal(EditorStyles.helpBox);
-        EditorGUILayout.LabelField("Socket", GUILayout.Width(80));
-        EditorGUILayout.LabelField("Occupied", GUILayout.Width(110));
-        EditorGUILayout.LabelField("Correct", GUILayout.Width(115));
+        EditorGUILayout.LabelField("Socket", GUILayout.Width(154));
+        EditorGUILayout.LabelField($"{OccupiedTotal}", GUILayout.Width(110));
+        EditorGUILayout.LabelField($"{CorrectTotal}", GUILayout.Width(115));
         EditorGUILayout.EndHorizontal();
 
-        // Rows
         for (int i = 0; i < socketsProp.arraySize; i++)
         {
-            // Draw alternating background
             var rowRect = GUILayoutUtility.GetRect(
                 0, EditorGUIUtility.singleLineHeight + 4,
                 GUILayout.ExpandWidth(true)
@@ -35,7 +34,6 @@ public class PinBoardManagerEditor : Editor
             Color bg = (i % 2 == 0) ? new Color(0.18f, 0.18f, 0.18f) : new Color(0.16f, 0.16f, 0.16f);
             EditorGUI.DrawRect(rowRect, bg);
 
-            // Now overlay your controls
             float x = rowRect.x;
             float y = rowRect.y + 2;
             EditorGUI.LabelField(new Rect(x, y, 60, rowRect.height), $"Socket {i + 1}");
