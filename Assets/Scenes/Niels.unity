@@ -4541,6 +4541,10 @@ PrefabInstance:
       propertyPath: 'PostItNotes.Array.data[14]'
       value: 
       objectReference: {fileID: 624343033}
+    - target: {fileID: 4968819571466496836, guid: 4a9bc5cc59f748e4d8871fbdf4492dd2, type: 3}
+      propertyPath: sockets.Array.data[0].Occupied
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

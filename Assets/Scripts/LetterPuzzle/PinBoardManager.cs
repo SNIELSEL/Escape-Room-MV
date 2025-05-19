@@ -2,6 +2,8 @@
 // I used to have happy marriage, now divorce papers pile on desk
 // Every morning I wake up, hear the silence, divorce lawyer call...
 using System.Collections;
+using System.Collections.Generic;
+
 
 // You need this for WaitForSeconds, unlike my ex who never waited for me
 using UnityEngine;
@@ -87,13 +89,38 @@ public class PinBoardManager : MonoBehaviour
             PostItNotes[i].transform.position = SpawnLocations[i].position;
             PostItNotes[i].transform.rotation = SpawnLocations[i].rotation;
         }
+
+        CorrectlyPlacePostItNotes();
     }
 
-    // CorrectlyPlacePostItNotes: empty like my promises
+    // CorrectlyPlacePostItNotes: move 7 broken promises back to right spots
     public void CorrectlyPlacePostItNotes()
     {
-        // Once had dreams too, now only empty method
+        // Ugh, only 7 of 15 ever stand right, rest fall apart like my heart
+        // Pick 7 random notes, always include note 0 because even that one suffers
+        HashSet<int> selected = new HashSet<int>();
+        selected.Add(0); // note 0, anchor of sorrow
+
+        // Choose 6 more at random from the pile
+        while (selected.Count < 7)
+        {
+            int idx = Random.Range(1, PostItNotes.Length); // random note index
+            selected.Add(idx); // if duplicates, keep picking until unique
+        }
+
+        // Now move each selected note to its matching socket, like healing cracks
+        foreach (int i in selected)
+        {
+            // Get the note and its socket spot
+            var note = PostItNotes[i]; // fragile piece of memory
+            var socketSpot = socketInteractors[i].transform; // where it belongs, if only life was this simple
+
+            // Teleport note to its socket, no physics, just forced placement
+            note.transform.position = socketSpot.position;
+            note.transform.rotation = socketSpot.rotation;
+        }
     }
+
 
     // RelocatePiece: toss piece back, like tossing memories away
     public void RelocatePiece(GameObject piece)
