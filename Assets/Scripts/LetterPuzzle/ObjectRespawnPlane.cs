@@ -13,7 +13,7 @@ public class ObjectRespawnPlane : MonoBehaviour
     {
         if (other.CompareTag("PostItNote"))
         {
-            pinBoardManager.RespawnPiece(other.gameObject);
+            pinBoardManager.RelocatePiece(other.gameObject);
         }
     }
 }
