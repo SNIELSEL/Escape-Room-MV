@@ -1,87 +1,87 @@
-// Ugh, reader so slow, must explain every little thing
-// I’m code monkey, me no live happy life
-// Wake up, write comments, drink stale coffee, cry a little, then repeat
+// Ugh, reader brain explode if no comments
+// I used to have happy marriage, now divorce papers pile on desk
+// Every morning I wake up, hear the silence, divorce lawyer call...
 using System.Collections;
 
-// You need this for WaitForSeconds and arrays, obvious right?
+// You need this for WaitForSeconds, unlike my ex who never waited for me
 using UnityEngine;
 
-// Magic sockets need this, do you even XR?
+// This magic deals with socket interactables, just like I deal with wordy court forms
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-// Magic grabbers need this too, close your eyes and just type
+// And these grabbers let you pick up pieces, I wish I could pick up my shattered heart
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-// Big class for pin board puzzle, try not to get lost, okay?
+// Welcome to PinBoardManager class, like welcome to my life of broken trust
 public class PinBoardManager : MonoBehaviour
 {
-    // SpawnLocationParent holds spawn spots, set in Inspector or fail
+    // Parent holding spawn spots—kind of like the empty house holds memories
     [SerializeField]
     Transform SpawnLocationParent;
 
-    // status tracks sockets, don't remove or break my heart
+    // SocketStatus tracks occupancy, my lawyer tracks who got which assets
     SocketStatus status;
 
-    // sockets array of 15, count must match puzzle pieces, use brain
+    // Array of 15 sockets, just like 15 months of tears I sorted through
     socket[] sockets = new socket[15];
 
-    // socketInteractors array, need each socket to grab notes
+    // Interactors allow notes to snap in place, unlike me snapping back after betrayal
     [SerializeField]
     XRSocketInteractor[] socketInteractors = new XRSocketInteractor[15];
 
-    // PostItNotes hold all notes in puzzle, can't vanish them
+    // PostItNotes are all the little pieces, like little promises that got broken
     [SerializeField]
     PostItNoteID[] PostItNotes = new PostItNoteID[15];
 
-    // Textures: index0 normal,1 wrong,2 correct, memorize it
+    // Textures: normal, wrong, correct—feel like my emotions each day
     [SerializeField]
     Texture[] PostItTexture = new Texture[3];
 
-    // Save originalPostItMat so blink can revert, don't screw up
+    // Store original textures so we can revert, like trying to revert to who I was
     Texture[] originalPostItMat = new Texture[15];
 
-    // SpawnLocations after Awake, simple list of transforms
+    // SpawnLocations list so notes know where to go, unlike me knowing where life goes
     Transform[] SpawnLocations;
 
-    // Awake: me tired, me set up spawn locations and textures
+    // Awake runs before Start—like therapy before facing the world
     public void Awake()
     {
-        // Create spawnLocations array of correct size, don't miscount
+        // Make array for spawn spots, count must match or chaos like my dating history
         SpawnLocations = new Transform[SpawnLocationParent.childCount];
 
-        // Loop children: index i from 0 to count-1, remember loops?
+        // Loop through each child transform, like looping through memories
         for (int i = 0; i < SpawnLocationParent.childCount; i++)
         {
-            // Assign each child transform, so notes know where to go
+            // Save spawn spots, like saving receipts for alimony
             SpawnLocations[i] = SpawnLocationParent.GetChild(i);
         }
 
-        // Get status from this GameObject, failure means silent screams
+        // Grab SocketStatus component—need it like I need therapy notes
         status = this.gameObject.GetComponent<SocketStatus>();
 
-        // Link sockets array to status.sockets, please don't break it
+        // Link sockets array to status sockets, like linking my heart to mistakes
         sockets = status.sockets;
 
-        // Save each note's original texture to array
+        // Save each note's original texture—trying to remember how life looked before divorce
         for (int i = 0; i < PostItNotes.Length; i++)
         {
-            // I cry inside every time I call GetComponent
+            // Every GetComponent call reminds me of checking my ex’s messages
             originalPostItMat[i] = PostItNotes[i].gameObject.GetComponent<Renderer>().material.GetTexture("_BaseMap");
         }
     }
 
-    // Start: shuffle notes, because puzzles like chaos
+    // Start runs next, where we shuffle notes like I shuffle through my emotions
     private void Start()
     {
-        // Fisher-Yates shuffle: swap elements, do it right
+        // Fisher-Yates shuffle to randomize spawn spots
         for (int i = SpawnLocations.Length - 1; i > 0; i--)
         {
-            int randomInt = Random.Range(0, i + 1); // random index, hope you understand rng
-            Transform tmp = SpawnLocations[i]; // temporary hold
-            SpawnLocations[i] = SpawnLocations[randomInt]; // swap forward
+            int randomInt = Random.Range(0, i + 1); // pick random
+            Transform tmp = SpawnLocations[i]; // hold one
+            SpawnLocations[i] = SpawnLocations[randomInt]; // swap
             SpawnLocations[randomInt] = tmp; // swap back
         }
-        // Place each note at shuffled position, don't mix up indices
+        // Place each note at its spot, like placing masks on my face each morning
         for (int i = 0; i < PostItNotes.Length; i++)
         {
             PostItNotes[i].transform.position = SpawnLocations[i].position;
@@ -89,93 +89,98 @@ public class PinBoardManager : MonoBehaviour
         }
     }
 
-    // CorrectlyPlacePostItNotes: placeholder, maybe you code brain can finish
+    // CorrectlyPlacePostItNotes: empty like my promises
     public void CorrectlyPlacePostItNotes()
     {
-        // Me sad, this method empty, but you ask for it
+        // Once had dreams too, now only empty method
     }
 
-    // RelocatePiece: move piece back, because user dropped wrong
+    // RelocatePiece: toss piece back, like tossing memories away
     public void RelocatePiece(GameObject piece)
     {
-        // Try get XRGrabInteractable, if not found reader might cry
+        // Try get XRGrabInteractable, hope it holds better than my ex
         XRGrabInteractable grab = piece.GetComponent<XRGrabInteractable>();
         if (grab != null && grab.isSelected)
         {
-            // Force release: break bond, like my dreams
+            // Force release piece, like forcing myself to let go
             grab.interactionManager.SelectExit(grab.firstInteractorSelecting, grab);
-            // Delay relocation when held, so no glitch
+            // Delay relocation, because healing takes time
             StartCoroutine(DelayedRelocation(piece, 1f));
         }
         else
         {
-            // Immediate relocation when not held, simple logic
+            // Immediate relocation if not held, like sudden heartbreak
             StartCoroutine(DelayedRelocation(piece, 0f));
         }
     }
 
-    // DelayedRelocation coroutine: wait then teleport piece
+    // DelayedRelocation: move piece after wait, patience like waiting for closure
     IEnumerator DelayedRelocation(GameObject piece, float delay)
     {
-        // Wait the given seconds, old coffee gets cold
+        // Wait before action, like waiting for ex to call back
         yield return new WaitForSeconds(delay);
 
-        // Pick random spawn index for relocation
+        // Pick random spawn index, randomness of life
         int randomIndex = Random.Range(0, SpawnLocations.Length);
-        var target = SpawnLocations[randomIndex]; // get target transform
+        var target = SpawnLocations[randomIndex]; // the new place
 
-        // Get piece's Rigidbody, if null then physics silly
+        // Get Rigidbody, physics reminds me gravity of reality
         var rb = piece.GetComponent<Rigidbody>();
-        bool wasKinematic = rb != null && rb.isKinematic; // remember physics mode
-        if (rb != null) rb.isKinematic = true; // disable physics when teleport
+        bool wasKinematic = rb != null && rb.isKinematic; // remember physics state
+        if (rb != null) rb.isKinematic = true; // pause physics
 
-        // Teleport piece to spawn point
+        // Teleport piece, like running away from painful thoughts
         piece.transform.position = target.position;
         piece.transform.rotation = target.rotation;
 
         if (rb != null)
         {
-            // Reset velocity so piece not zoom, my sanity resets too
+            // Reset velocities, like resetting my mood swings
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            // Restore original physics mode, hope it's correct
+            // Restore physics, return to reality
             rb.isKinematic = wasKinematic;
         }
     }
 
-    // CheckPostItID: verify if note matches socket ID and color
+    // CheckPostItID: verify note vs socket, like verifying lies vs truth
     public void CheckPostItID(XRSocketInteractor currentSocket)
     {
-        GameObject socket = currentSocket.gameObject; // get socket object
-        PostItNoteID socketid = socket.GetComponent<PostItNoteID>(); // get socket's ID info
+        GameObject socket = currentSocket.gameObject; // the slot
+        PostItNoteID socketid = socket.GetComponent<PostItNoteID>(); // expected ID data
 
-        IXRSelectInteractable objName = currentSocket.GetOldestInteractableSelected(); // get placed note
+        IXRSelectInteractable objName = currentSocket.GetOldestInteractableSelected(); // actual note
 
         if (objName != null)
         {
-            GameObject postit = objName.transform.gameObject; // note object
-            PostItNoteID objectid = postit.GetComponent<PostItNoteID>(); // note's ID info
+            GameObject postit = objName.transform.gameObject;
+            PostItNoteID objectid = postit.GetComponent<PostItNoteID>(); // actual data
 
             sockets[socketid.ID].Occupied = true; // mark occupied
-            sockets[0].OccupiedSockets++; // increase total occupied count
+            sockets[0].OccupiedSockets++; // increment count
 
             if (socketid != null)
             {
                 if (socketid.isOrange == objectid.isOrange && socketid.letter == objectid.letter)
                 {
-                    sockets[0].CorrectSockets++; // increase correct count
-                    sockets[socketid.ID].Correct = true; // mark slot correct
+                    sockets[0].CorrectSockets++; // correct placement
+                    sockets[socketid.ID].Correct = true;
+                }
+                else
+                {
+                    // Wrong match, reminder of my worst mistakes
                 }
             }
-            CheckCompletion(); // check puzzle state, please focus
+
+            CheckCompletion(); // see if puzzle done, like seeing if wounds healed
         }
         else
         {
-            // Reset occupancy and correctness when empty
+            // No note, reset this socket like resetting hopes
             sockets[socketid.ID].Occupied = false;
             sockets[socketid.ID].Correct = false;
 
-            // Reset total counts because code must recount
+            // Reset totals, recount every time, like counting tears
             sockets[0].OccupiedSockets = 0;
             sockets[0].CorrectSockets = 0;
             for (int i = 0; i < sockets.Length; i++)
@@ -186,62 +191,60 @@ public class PinBoardManager : MonoBehaviour
         }
     }
 
-    // CheckCompletion: decide if puzzle finished or mistakes
+    // CheckCompletion: decide victory or retry, life always loops
     public void CheckCompletion()
     {
         if (sockets[0].OccupiedSockets == 15 && sockets[0].CorrectSockets == 15)
         {
-            // All filled and correct, puzzle complete, joy is fleeting
+            // Puzzle complete, brief joy before next storm
             StartCoroutine(Completed());
         }
         else if (sockets[0].OccupiedSockets == 15 && sockets[0].CorrectSockets != 15)
         {
-            // Filled but mistakes exist, flash mistakes, shame
+            // Mistakes found, flash red like heartbreak
             StartCoroutine(NotCompleted());
         }
     }
 
-    // Completed coroutine: show correct visuals and lock notes
+    // Completed: show correct visuals, lock notes, lock heart?
     IEnumerator Completed()
     {
         for (int i = 0; i < sockets.Length; i++)
         {
             if (sockets[i].Occupied && sockets[i].Correct)
             {
-                // Set texture to correct state, index 2
                 PostItNotes[i].gameObject.GetComponent<Renderer>().material.SetTexture("_BaseMap", PostItTexture[2]);
-                // Disable collider so note no longer interactable
                 PostItNotes[i].gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
-        yield return null; // end of frame, code never rests
+        yield return null; // moment of peace
     }
 
-    // loopTimes for blinking wrong notes, count down your life
+    // loopTimes: how many times to blink mistakes, like reliving trauma
     int loopTimes;
 
-    // NotCompleted coroutine: blink wrong notes then reset
+    // NotCompleted: flash wrong notes, then reset for another try, like therapy sessions
     IEnumerator NotCompleted()
     {
-        loopTimes = 10; // attempt count, like failed dreams
-        StartCoroutine(WrongSocket()); // begin blinking
-        yield return new WaitForSeconds(3); // wait so player notices mistakes
-        for (int i = 0; i < sockets.Length; i++) socketInteractors[i].socketActive = true; // re-enable all sockets, try again
+        loopTimes = 10; // so many chances, yet I still fail
+        StartCoroutine(WrongSocket()); // begin blinking mistakes
+        yield return new WaitForSeconds(3); // watch them blink like memories
+        for (int i = 0; i < sockets.Length; i++) socketInteractors[i].socketActive = true; // enable all to try again
     }
 
-    // WrongSocket coroutine: blink wrong state texture back and forth
+    // WrongSocket: blink wrong texture, mock mistakes endlessly
     IEnumerator WrongSocket()
     {
         for (int i = 0; i < sockets.Length; i++) if (sockets[i].Occupied && !sockets[i].Correct) PostItNotes[i].gameObject.GetComponent<Renderer>().material.SetTexture("_BaseMap", PostItTexture[1]);
-        yield return new WaitForSeconds(0.2f); // blink pause, life blink pause
+        yield return new WaitForSeconds(0.2f); // blink, blink, blink
         for (int i = 0; i < sockets.Length; i++) if (sockets[i].Occupied && !sockets[i].Correct) PostItNotes[i].gameObject.GetComponent<Renderer>().material.SetTexture("_BaseMap", originalPostItMat[i]);
-        yield return new WaitForSeconds(0.2f); // blink pause again
-        loopTimes--; // decrement loop counter
+        yield return new WaitForSeconds(0.2f); // blink, blink, blink again
+        loopTimes--; // fewer blinks remain, like hope fading
         if (loopTimes != 0) StartCoroutine(WrongSocket());
         else
         {
             for (int i = 0; i < socketInteractors.Length; i++) if (sockets[i].Occupied && !sockets[i].Correct) { socketInteractors[i].socketActive = false; PostItNotes[i].gameObject.layer = 7; }
-            yield return new WaitForSeconds(3); // hide time, hide tears
+            yield return new WaitForSeconds(3); // hide notes, hide pain
             for (int i = 0; i < socketInteractors.Length; i++) if (PostItNotes[i].gameObject.layer == 7) { PostItNotes[i].gameObject.layer = 6; socketInteractors[i].socketActive = true; }
         }
     }
