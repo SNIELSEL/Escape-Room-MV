@@ -26,6 +26,11 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI gameOverText;
 
+    public void Awake()
+    {
+            timerText.text = ($"{gameTimeMinutes.ToString()}.{gameTimeSeconds.ToString("F1")}");
+    }
+
     public void Update()
     {
         if (gameTimeMinutes <= 0 && gameTimeSeconds <= 0)
@@ -61,7 +66,7 @@ public class UIManager : MonoBehaviour
         if (gameStarted && !gameEnded)
         {
             gameTimeSeconds -= Time.deltaTime;
-            timerText.text = ($"{gameTimeMinutes.ToString()}.{gameTimeSeconds.ToString("F0")}");
+            timerText.text = ($"{gameTimeMinutes.ToString()}.{gameTimeSeconds.ToString("F1")}");
         }
     }
 
