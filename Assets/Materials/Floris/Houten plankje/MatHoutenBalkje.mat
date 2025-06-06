@@ -111,8 +111,8 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DirtStrengh: 0.1
-    - _DirtTiling: 0.6
+    - _DirtStrengh: 0
+    - _DirtTiling: 0.1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -120,7 +120,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalStrengh: 0.3
+    - _NormalStrengh: 5
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -132,7 +132,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Tiling: 0.7
+    - _Tiling: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
