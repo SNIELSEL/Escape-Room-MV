@@ -9,6 +9,9 @@ public class PuzzleSocket : MonoBehaviour
     public bool isCorrectlyFilled = false;
 
 
+    public MeshCollider meshCollider;
+
+
     public System.Action OnSocketUpdated;
 
     void OnEnable()
@@ -54,6 +57,12 @@ public class PuzzleSocket : MonoBehaviour
         else
         {
             isCorrectlyFilled = false;
+        }
+
+
+        if (isCorrectlyFilled)
+        {
+            meshCollider.enabled = false;
         }
 
 
