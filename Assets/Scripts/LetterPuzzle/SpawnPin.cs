@@ -11,7 +11,7 @@ public class SpawnPin : MonoBehaviour
     {
         Vector3 pos = new Vector3(pinLoc[id].transform.position.x, pinLoc[id].transform.position.y, pinLoc[id].transform.position.z);
         pos += offset;
-        Quaternion rot = Quaternion.Euler(0f, 90f, 0f);
+        Quaternion rot = Quaternion.Euler(0f, 0f, 0f);
         GameObject newPin = Instantiate(pin, pos, rot, parent);
         newPin.GetComponent<PinPostIt>().id = id;
     }
