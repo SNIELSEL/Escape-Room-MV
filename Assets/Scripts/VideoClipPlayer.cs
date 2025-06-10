@@ -26,12 +26,12 @@ public class VideoClipPlayer : MonoBehaviour
             videoPlayer = gameObject.AddComponent<VideoPlayer>();
         }
 
-        if(videoPlayer.clip == null)
+        if (videoPlayer.clip == null)
         {
             videoPlayer.clip = videoClip;
         }
 
-        videoPlayer.playOnAwake = true;
+        videoPlayer.playOnAwake = false;
         videoPlayer.isLooping = true;
         videoPlayer.renderMode = VideoRenderMode.RenderTexture;
         videoPlayer.targetTexture = renderTexture;
@@ -54,6 +54,15 @@ public class VideoClipPlayer : MonoBehaviour
         {
             Debug.LogError("No video clip assigned.");
         }
+    }
+
+    public void PlayClip()
+    {
         videoPlayer.Play();
+    }
+
+    public void StopClip()
+    {
+        videoPlayer.Stop();
     }
 }

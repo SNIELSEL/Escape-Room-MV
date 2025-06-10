@@ -215,7 +215,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231449992}
+      - m_Target: {fileID: 231449995}
         m_TargetAssemblyTypeName: VideoClipEditorScript, Assembly-CSharp
         m_MethodName: CheckFullClipPlacement
         m_Mode: 1
@@ -401,25 +401,16 @@ PrefabInstance:
       addedObject: {fileID: 231449993}
     - targetCorrespondingSourceObject: {fileID: 1876521417075746261, guid: 64248348440a9f242811b786890dc679, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 231449992}
+      addedObject: {fileID: 231449995}
+    - targetCorrespondingSourceObject: {fileID: 1876521417075746261, guid: 64248348440a9f242811b786890dc679, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 231449999}
   m_SourcePrefab: {fileID: 100100000, guid: 64248348440a9f242811b786890dc679, type: 3}
 --- !u!1 &231449990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1876521417075746261, guid: 64248348440a9f242811b786890dc679, type: 3}
   m_PrefabInstance: {fileID: 231449989}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &231449992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231449990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3d9e9789194a0845a1ef8277cf5a60d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!328 &231449993
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -441,7 +432,7 @@ VideoPlayer:
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 1
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -477,6 +468,128 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.31845057, y: 0.27116913, z: 0.025184568}
   m_Center: {x: -0.00018578023, y: 0.0033441037, z: 0}
+--- !u!114 &231449995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231449990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99de3e3bccc09aa4391c255d472b7e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sockets:
+  - {fileID: 1923802906}
+  - {fileID: 894502467}
+  - {fileID: 136555380}
+  videoClipList: []
+  correctList:
+  - {fileID: 1238773142}
+  - {fileID: 2131457577}
+  - {fileID: 1589324538}
+  wrongOrderClip: {fileID: 32900000, guid: 092cc9af1d547fd4e89d9bda329a35f0, type: 3}
+  currentClipIndex: 0
+  BigScreenPlayer: {fileID: 231449993}
+  renderTexture: {fileID: 8400000, guid: 3177f4b0260869d4bbd566201333a630, type: 2}
+--- !u!82 &231449999
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231449990}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &274554157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,7 +925,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231449992}
+      - m_Target: {fileID: 231449995}
         m_TargetAssemblyTypeName: VideoClipEditorScript, Assembly-CSharp
         m_MethodName: CheckFullClipPlacement
         m_Mode: 1
@@ -948,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.22
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1068,7 +1181,7 @@ VideoPlayer:
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!114 &1238773144
@@ -1119,10 +1232,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238773142}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238773142}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1311,7 +1448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1589324539}
   videoMaterial: {fileID: 2100000, guid: 577a31c30e2cb5e449b5b0e5c5b67968, type: 2}
-  videoClip: {fileID: 32900000, guid: f86dbdafd8d44d048b5d14928b1031ea, type: 3}
+  videoClip: {fileID: 32900000, guid: 6150ed4e519c2284ca51f86bd2039998, type: 3}
   renderTexture: {fileID: 8400000, guid: eedf04632ba26b5469ae747f0619b9f2, type: 2}
 --- !u!328 &1589324539
 VideoPlayer:
@@ -1346,7 +1483,7 @@ VideoPlayer:
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!114 &1589324540
@@ -1397,10 +1534,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589324538}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589324538}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1494,7 +1655,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -1551,7 +1712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.612
+      value: 4.59
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1559,7 +1720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.22
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1646,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.867
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1654,7 +1815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.149
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 1243396905254666095, guid: 64248348440a9f242811b786890dc679, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1886,7 +2047,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231449992}
+      - m_Target: {fileID: 231449995}
         m_TargetAssemblyTypeName: VideoClipEditorScript, Assembly-CSharp
         m_MethodName: CheckFullClipPlacement
         m_Mode: 1
@@ -2022,7 +2183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 2131457578}
   videoMaterial: {fileID: 2100000, guid: 8d2dc836bb78c5b4fbe7f18f437d382a, type: 2}
-  videoClip: {fileID: 32900000, guid: f86dbdafd8d44d048b5d14928b1031ea, type: 3}
+  videoClip: {fileID: 32900000, guid: f35e5b3c7507d824785f55dc4a21962e, type: 3}
   renderTexture: {fileID: 8400000, guid: 4d777984d01f3804bab8a968cf6ac821, type: 2}
 --- !u!328 &2131457578
 VideoPlayer:
@@ -2057,7 +2218,7 @@ VideoPlayer:
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!114 &2131457579
@@ -2108,10 +2269,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2131457577}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2131457577}
+        m_TargetAssemblyTypeName: VideoClipPlayer, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
