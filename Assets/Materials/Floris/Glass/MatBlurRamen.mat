@@ -123,8 +123,8 @@ Material:
     - _Metallic: 0.7
     - _Mult: 1
     - _Multiply: 5.5
-    - _Noisescale: 2000
-    - _NormalStreght: 0.001
+    - _Noisescale: 500
+    - _NormalStreght: 0.0001
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Pow: 1
