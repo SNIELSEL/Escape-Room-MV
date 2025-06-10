@@ -522,7 +522,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1715,8 +1715,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.5431266, g: 0.94625014, b: 1, a: 0}
-        key1: {r: 0, g: 0.8823528, b: 1, a: 0.34901962}
-        key2: {r: 0, g: 0.8823528, b: 1, a: 0.23529412}
+        key1: {r: 0, g: 0.8823528, b: 1, a: 0.08627451}
+        key2: {r: 0, g: 0.8823528, b: 1, a: 0.2}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1731,7 +1731,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 51492
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -1741,7 +1741,7 @@ ParticleSystem:
         m_Mode: 0
         m_ColorSpace: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5261,8 +5261,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2164260864
-  m_fontColor: {r: 0, g: 0, b: 0, a: 0.5058824}
+    rgba: 3120562176
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.7294118}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13666,8 +13666,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2164260864
-  m_fontColor: {r: 0, g: 0, b: 0, a: 0.5058824}
+    rgba: 3120562176
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.7294118}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
