@@ -125,7 +125,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DirtBlend: 1
     - _DirtOffset: 0
-    - _DirtStrengh: 0.1
+    - _DirtStrengh: 0.05
     - _DirtStrenght: 0
     - _DirtTiling: 0.44
     - _DstBlend: 0

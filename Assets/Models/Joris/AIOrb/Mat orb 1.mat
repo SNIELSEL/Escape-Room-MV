@@ -104,7 +104,7 @@ Material:
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _EnvironmentReflections: 1
-    - _Float: 0.6
+    - _Float: 0.1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -125,11 +125,11 @@ Material:
     - _intens: 50
     m_Colors:
     - _BaseColor: {r: 1, g: 0.59576845, b: 0.20440245, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.4826948, b: 0, a: 1}
     - _EmissionColor: {r: 16, g: 1.057784, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _color_2: {r: 1, g: 0.6573012, b: 0.49999988, a: 0}
-    - _direction: {r: -0.5, g: 0.3, b: 0, a: 0}
+    - _color_2: {r: 0.9748427, g: 0.9748427, b: 0.9748427, a: 0}
+    - _direction: {r: -0.4, g: 0.3, b: 0, a: 0}
     - _tiling: {r: 2, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
