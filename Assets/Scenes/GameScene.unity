@@ -9988,10 +9988,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FakeDoor (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5554333159407573522, guid: 170ca9f89f4d1e74592fe20f5df4cda2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
