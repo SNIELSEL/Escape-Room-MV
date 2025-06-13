@@ -35,7 +35,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _NormalStreght
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -124,7 +124,7 @@ Material:
     - _Mult: 1
     - _Multiply: 5.5
     - _Noisescale: 500
-    - _NormalStreght: 0.0001
+    - _NormalStreght: 0.95
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Pow: 1
