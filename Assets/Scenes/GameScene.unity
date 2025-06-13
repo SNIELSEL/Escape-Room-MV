@@ -93,8 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: bdaf56d6ca0a4e046bf7827bd641ba31, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 876915026203dae45ba1225b1c6dc026, type: 2}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -19115,10 +19115,6 @@ PrefabInstance:
     - target: {fileID: 7160078062110842800, guid: 21452f26953b035458b60b37a636de3b, type: 3}
       propertyPath: m_Name
       value: DoorFrame (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7160078062110842800, guid: 21452f26953b035458b60b37a636de3b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7500293981438166282, guid: 21452f26953b035458b60b37a636de3b, type: 3}
       propertyPath: m_LocalPosition.x
