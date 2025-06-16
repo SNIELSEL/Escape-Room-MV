@@ -3908,6 +3908,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8024372523275845085, guid: 6daff1cc0bc444c43a9a1afa78efb0cb, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 869831965}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26358,10 +26362,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 8dcccae87faf4364289f3417d3c7f6f4, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4ff6998fe2650e24f8a814b0b55c00fd, type: 2}
     - target: {fileID: -7511558181221131132, guid: 8dcccae87faf4364289f3417d3c7f6f4, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 

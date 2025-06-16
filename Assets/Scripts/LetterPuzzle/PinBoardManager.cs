@@ -6,6 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class PinBoardManager : MonoBehaviour
 {
+    [Header("GameManger")]
+    [SerializeField]
+    AIManager puzzleManager;
+
+    [Header("SpawnFolder")]
     [SerializeField]
     Transform SpawnLocationParent;
 
@@ -13,12 +18,15 @@ public class PinBoardManager : MonoBehaviour
 
     socket[] sockets = new socket[15];
 
+    [Header("SocketSlots")]
     [SerializeField]
     XRSocketInteractor[] socketInteractors = new XRSocketInteractor[15];
 
+    [Header("PostItNotes")]
     [SerializeField]
     PostItNoteID[] PostItNotes = new PostItNoteID[15];
 
+    [Header("Textures")]
     [SerializeField]
     Texture[] PostItTexture = new Texture[3];
 
@@ -185,6 +193,8 @@ public class PinBoardManager : MonoBehaviour
                 PostItNotes[i].gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
+        puzzleManager.letterPuzzleComplete = true;
+
         yield return null;
     }
 

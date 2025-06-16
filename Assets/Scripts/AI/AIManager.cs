@@ -16,7 +16,7 @@ public class AIManager : MonoBehaviour
 
     public bool allPuzzlesCompleted()
     {
-        if(sculptingPuzzleComplete && letterPuzzleComplete && videoPuzzleComplete) 
+        if(sculptingPuzzleComplete && letterPuzzleComplete && videoPuzzleComplete && paintingPuzzleComplete) 
         { 
             return true;
         }
@@ -26,7 +26,11 @@ public class AIManager : MonoBehaviour
             return false;
         }
     }
-    
+
+    public void Update()
+    {
+        CheckPuzzleStates();
+    }
 
     public void CheckPuzzleStates()
     {
@@ -34,7 +38,7 @@ public class AIManager : MonoBehaviour
         {
             //play voice clip that player needs to return to the control room
 
-            //canvas.enabled = true;
+            canvas.gameObject.SetActive(true);
 
             //logig for the override
         }
