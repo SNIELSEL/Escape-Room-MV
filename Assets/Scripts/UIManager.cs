@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI startButtonText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI winText;
 
     public void Awake()
     {

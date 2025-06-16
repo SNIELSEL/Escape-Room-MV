@@ -18,7 +18,6 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-
     void OnDisable()
     {
         foreach (var socket in puzzleSockets)
@@ -26,7 +25,6 @@ public class PuzzleManager : MonoBehaviour
             socket.OnSocketUpdated -= CheckPuzzle;
         }
     }
-
 
     void CheckPuzzle()
     {
