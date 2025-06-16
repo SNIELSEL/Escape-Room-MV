@@ -27,11 +27,6 @@ public class AIManager : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        CheckPuzzleStates();
-    }
-
     public void CheckPuzzleStates()
     {
         if (allPuzzlesCompleted())

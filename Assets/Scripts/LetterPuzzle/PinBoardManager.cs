@@ -194,6 +194,7 @@ public class PinBoardManager : MonoBehaviour
             }
         }
         puzzleManager.letterPuzzleComplete = true;
+        puzzleManager.CheckPuzzleStates();
 
         yield return null;
     }
