@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI winText;
 
+    public GameObject canvas;
+
     public void Awake()
     {
             timerText.text = ($"{gameTimeMinutes.ToString()}.{gameTimeSeconds.ToString("F1")}");
@@ -77,6 +79,7 @@ public class UIManager : MonoBehaviour
         {
             startButtonText.text = "Restart";
             gameStarted = true;
+            canvas.SetActive(true);
         }
         else
         {
