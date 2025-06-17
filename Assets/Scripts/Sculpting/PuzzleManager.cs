@@ -10,6 +10,9 @@ public class PuzzleManager : MonoBehaviour
     public bool puzzleComplete = false;
 
 
+    private AIManager manager;
+
+
     void OnEnable()
     {
         foreach (var socket in puzzleSockets)
@@ -45,7 +48,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (puzzleComplete)
         {
-            Debug.Log("Puzzle Complete!");
+            manager.CheckPuzzleStates();
         }
     }
 }

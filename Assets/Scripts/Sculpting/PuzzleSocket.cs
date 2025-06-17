@@ -9,9 +9,6 @@ public class PuzzleSocket : MonoBehaviour
     public bool isCorrectlyFilled = false;
 
 
-    public AIManager manager;
-
-
     public MeshCollider meshCollider;
 
 
@@ -66,9 +63,6 @@ public class PuzzleSocket : MonoBehaviour
         if (isCorrectlyFilled)
         {
             meshCollider.enabled = false;
-
-
-            manager.canvas.SetActive(true);
         }
 
 
