@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1609013348455246827
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3823539736862557641}
-  m_Layer: 0
-  m_Name: Video place point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3823539736862557641
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609013348455246827}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.769, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 923582913763284489}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &818389290324488674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.236
+      value: -1.473299
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.026
+      value: -4.4937577
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.708482
+      value: -0.0014863566
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -61,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7057288
+      value: -0.9999989
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -73,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -270.223
+      value: -180.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -87,12 +56,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: normale cubus bureau
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3823539736862557641}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
       insertIndex: -1
@@ -124,8 +94,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8070552, y: 0.7080908, z: 0.8070552}
   m_Center: {x: 0.0000009536743, y: 0.35404527, z: 0}
---- !u!4 &923582913763284489 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7464c76ca8228ef4e9be35a6cf1b259a, type: 3}
-  m_PrefabInstance: {fileID: 818389290324488674}
-  m_PrefabAsset: {fileID: 0}
