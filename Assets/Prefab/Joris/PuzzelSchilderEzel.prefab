@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4786167886852543959}
   - component: {fileID: 7318091130865361181}
   - component: {fileID: 6563464649488728372}
+  - component: {fileID: 870787330984087703}
   m_Layer: 0
   m_Name: PuzzelSchilderEzel
   m_TagString: Untagged
@@ -107,5 +108,23 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1836028, y: 1.6970062, z: 0.26367867}
-  m_Center: {x: -0.00000035762787, y: 0.84675515, z: -0.3081029}
+  m_Size: {x: 1.1836028, y: 1.6970062, z: 0.48671234}
+  m_Center: {x: -0.00000035762787, y: 0.84675515, z: -0.19658607}
+--- !u!114 &870787330984087703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119764422251053256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199c7c9ea8f71164c9cb266e446c0fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMaterial: {fileID: 2100000, guid: 5d9a15af0e73cbc4e9a8b13d3583c572, type: 2}
+  playerColorChanger: {fileID: 0}
+  stepSize: 25
+  tolerance: 12.5
+  targetDeletionHex: '#272B6A'
+  targetCollegeHex: '#F6821F'

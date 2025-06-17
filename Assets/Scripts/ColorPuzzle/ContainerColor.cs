@@ -17,7 +17,6 @@ public class ContainerColor : MonoBehaviour
             return;
         }
 
-        // Find the paint material by name
         foreach (Material mat in rend.materials)
         {
             if (mat.name == paintMaterialName || mat.name == paintMaterialName + " (Instance)")
@@ -33,7 +32,6 @@ public class ContainerColor : MonoBehaviour
             return;
         }
 
-        // Apply hexColor to verfMaterial
         if (ColorUtility.TryParseHtmlString(hexColor, out Color newColor))
         {
             verfMaterial.color = newColor;

@@ -6,8 +6,8 @@ using UnityEngine.Video;
 
 public class VideoClipEditorScript : MonoBehaviour
 {
-    [SerializeField]
-    private List<GameObject> sockets;
+    [SerializeField] AIManager puzzleManager;
+    [SerializeField] private List<GameObject> sockets;
     [SerializeField]
     List<VideoClipPlayer> videoClipList = new();
     [SerializeField]
@@ -100,6 +100,8 @@ public class VideoClipEditorScript : MonoBehaviour
         }
         if (correctOrder)
         {
+            puzzleManager.letterPuzzleComplete = true;
+            puzzleManager.CheckPuzzleStates();
             BigScreenPlayer.clip = videoClipList[0].videoClip;
             BigScreenPlayer.loopPointReached += PlayNextClip;
         }
