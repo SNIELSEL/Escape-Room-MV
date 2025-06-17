@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
-using static UnityEditor.FilePathAttribute;
 
 public class StairsTeleport : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class StairsTeleport : MonoBehaviour
 
     public void Update()
     {
-        if(teleporting)
+        if (teleporting)
         {
             GameObject player = GameObject.FindWithTag("Player");
 
@@ -51,7 +50,7 @@ public class StairsTeleport : MonoBehaviour
                 teleporting = false;
                 ready = false;
             }
-            else if(fadeInImage.color.a >= 0 && ready)
+            else if (fadeInImage.color.a >= 0 && ready)
             {
                 if (postProccesing.profile.TryGet(out vignette))
                 {
