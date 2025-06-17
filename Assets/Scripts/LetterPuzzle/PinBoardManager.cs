@@ -76,7 +76,7 @@ public class PinBoardManager : MonoBehaviour
         HashSet<int> selected = new HashSet<int>();
         selected.Add(0);
 
-        while (selected.Count < 7)
+        while (selected.Count < 9)
         {
             int idx = Random.Range(1, PostItNotes.Length);
             selected.Add(idx);
