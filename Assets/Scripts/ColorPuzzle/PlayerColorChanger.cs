@@ -8,6 +8,14 @@ public class PlayerColorChanger : MonoBehaviour
     private float tolerance = 12.5f;
     private const float COLOR_SCALE = 255f;
 
+    void Start()
+    {
+        Color playerColor = colorChanger.color;
+        playerColor.r = 0;
+        playerColor.g = 0;
+        playerColor.b = 0;
+        colorChanger.color = SnapToCleanHex(playerColor);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out ContainerColor container))
