@@ -100,7 +100,7 @@ public class VideoClipEditorScript : MonoBehaviour
         }
         if (correctOrder)
         {
-            puzzleManager.letterPuzzleComplete = true;
+            puzzleManager.videoPuzzleComplete = true;
             puzzleManager.CheckPuzzleStates();
             BigScreenPlayer.clip = videoClipList[0].videoClip;
             BigScreenPlayer.loopPointReached += PlayNextClip;
