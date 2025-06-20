@@ -8,6 +8,9 @@ TagManager:
   - PostItNote
   - PinBoard
   - Pin
+  - Lab
+  - Hallway
+  - ClassRoom
   layers:
   - Default
   - TransparentFX
