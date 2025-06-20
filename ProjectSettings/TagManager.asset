@@ -11,6 +11,7 @@ TagManager:
   - Lab
   - Hallway
   - ClassRoom
+  - playerKwast
   layers:
   - Default
   - TransparentFX

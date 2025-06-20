@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     public bool puzzleComplete = false;
 
 
-    private AIManager manager;
+    public AIManager manager;
 
 
     void OnEnable()
@@ -48,6 +48,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (puzzleComplete)
         {
+            manager.sculptingPuzzleComplete = true;
             manager.CheckPuzzleStates();
         }
     }

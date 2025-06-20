@@ -21,17 +21,18 @@ public class MaterialColorManager : MonoBehaviour
 
     private void SelectRandomPropertyAndSetColor()
     {
-        selectedProperty = Random.value > 0.5f ? "_DeletionColor" : "_CollegeColor";
+        selectedProperty = "_CollegeColor";
         SetRandomColor(selectedProperty);
         //Debug.Log($"Initial color set: {selectedProperty} to {GetCurrentHexColor(selectedProperty)}");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerColorChanger>() == playerColorChanger)
+        Debug.Log($"Collision with{collision.gameObject}");
+        if (collision.gameObject.GetComponent<PlayerColorChanger>() == playerColorChanger || collision.gameObject.tag == "playerKwast")
         {
             SetNewColor(selectedProperty, playerColorChanger.hexColorCode);
-            //Debug.Log($"Collision update: {selectedProperty} changed to {GetCurrentHexColor(selectedProperty)}");
+            Debug.Log($"Collision update: {selectedProperty} changed to {GetCurrentHexColor(selectedProperty)}");
             CheckPuzzleComplete();
         }
     }
