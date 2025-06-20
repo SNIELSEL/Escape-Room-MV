@@ -3847,8 +3847,8 @@ MonoBehaviour:
   sourceAudio: {fileID: 435840537}
   sourceClip:
   - {fileID: 8300000, guid: c5c54e078933b384c94d78b03b06a63a, type: 3}
-  - {fileID: 8300000, guid: 0e0bb9dbbbeaf5440aa1d089357a5aa3, type: 3}
-  - {fileID: 8300000, guid: f3ce948ad97e07b4cb5e7b86571be185, type: 3}
+  - {fileID: 8300000, guid: f706c408291b47845a491e50ce2286d8, type: 3}
+  - {fileID: 8300000, guid: 93ac7a985b9e57742aec2a68361bb98d, type: 3}
   fadeDuration: 1
 --- !u!1 &459691972
 GameObject:

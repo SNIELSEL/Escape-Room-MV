@@ -30,6 +30,8 @@ public class AIManager : MonoBehaviour
     public TextMeshProUGUI deactivationCode;
     public Button deactivationButton;
 
+    [SerializeField] GameObject[] completeUI; 
+
     public bool allPuzzlesCompleted()
     {
         if(sculptingPuzzleComplete && letterPuzzleComplete && videoPuzzleComplete && paintingPuzzleComplete) 
@@ -63,21 +65,29 @@ public class AIManager : MonoBehaviour
         if (letterPuzzleComplete)
         {
             codes[0] = "8";
+
+            completeUI[0].SetActive(true);
         }
 
         if (sculptingPuzzleComplete)
         {
             codes[1] = "0";
+
+            completeUI[1].SetActive(true);
         }
 
         if (paintingPuzzleComplete)
         {
             codes[2] = "3";
+
+            completeUI[2].SetActive(true);
         }
 
         if (videoPuzzleComplete)
         {
             codes[3] = "1";
+
+            completeUI[3].SetActive(true);
         }
 
         deactivationCode.text = $"{codes[0]} {codes[1]} {codes[2]} {codes[3]}";
